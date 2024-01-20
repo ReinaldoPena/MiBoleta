@@ -1,0 +1,7 @@
+{
+  "name": "MiBoleta",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
