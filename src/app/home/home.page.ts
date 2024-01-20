@@ -9,7 +9,10 @@ export class HomePage {
 
    
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    
+    ) {}
   goToIntro(){
     console.log("go to intro");
     this.router.navigateByUrl('/intro');

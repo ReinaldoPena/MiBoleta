@@ -8,25 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class IntroPage implements OnInit {
   slides = [
     {
-      title: "Bienvenido1",
-      description:"esta pagina es la 1",
-      image: "../../assets/images/1.jpg",
+      title: "Bienvenidos a MiBoleta",
+      description:"Hola, gracias por usar Mi Boleta, el lugar mas seguro para adquirir tus boletas para cualquier evento!",
+      image: "../../assets/images/TicketLogo.png",
       help_text: "Desliza para continuar",
-      class:"red-title"
+      class:"blue-title"
     },
     {
-      title: "Bienvenido2",
-      description:"esta pagina es la 2",
-      image: "../../assets/images/1.jpg",
+      title: "Carnaval De Barranquilla",
+      description:"Adquiere ya tus boletas para palco del carnaval de barranquilla y disfruta de sus desfiles con las mejores vistas y atencion",
+      image: "../../assets/images/logocarna2024.png",
       help_text: "Desliza para continuar",
-      class:""
+      class:"blue-title"
     },
     {
-      title: "Bienvenido3",
-      description:"esta pagina es la 3",
-      image: "../../assets/images/1.jpg",
+      title: "Superliga de Colombia",
+      description:"Disfruta la vuelta de la final de la Superliga de colombia 2024, Millonarios vs Junior este miercoles en el estadio El Campín de Bogotá",
+      image: "../../assets/images/superliga.png",
       help_text: "Desliza para continuar",
-      class:""
+      class:"blue-title"
     }
   ]
   constructor() { }
