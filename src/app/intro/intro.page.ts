@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage-angular'
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.page.html',
@@ -12,6 +13,7 @@ export class IntroPage implements OnInit {
       description:"Hola, gracias por usar Mi Boleta, el lugar mas seguro para adquirir tus boletas para cualquier evento!",
       image: "../../assets/images/TicketLogo.png",
       help_text: "Desliza para continuar",
+      ionbutton: "Omitir",
       class:"blue-title"
     },
     {
@@ -19,6 +21,7 @@ export class IntroPage implements OnInit {
       description:"Adquiere ya tus boletas para palco del carnaval de barranquilla y disfruta de sus desfiles con las mejores vistas y atencion",
       image: "../../assets/images/logocarna2024.png",
       help_text: "Desliza para continuar",
+      ionbutton: "Omitir",
       class:"blue-title"
     },
     {
@@ -26,12 +29,21 @@ export class IntroPage implements OnInit {
       description:"Disfruta la vuelta de la final de la Superliga de colombia 2024, Millonarios vs Junior este miercoles en el estadio El Campín de Bogotá",
       image: "../../assets/images/superliga.png",
       help_text: "Desliza para continuar",
+      ionbutton: "x",
       class:"blue-title"
     }
   ]
-  constructor() { }
+  constructor(
+    private router: Router,
+    private storage: Storage
+  ) { }
 
   ngOnInit() {
+  }
+  goToHome(){
+    console.log("go to home");
+    this.router.navigateByUrl('/home');
+    this.storage.set('mostreElHome', true);
   }
 
 }

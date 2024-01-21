@@ -12,11 +12,15 @@
     [pagination]="true"
     [slidesPerView]="1"
     >
-    <swiper-slide *ngFor="let slide of slides">
-      <h1 class="blue-title">{{slide.title}}</h1>
-      <p>{{slide.description}}</p>
+    <swiper-slide *ngFor="let slide of slides; let last = last">
+      
+      <h1 class={{slide.class}}>{{slide.title}}</h1>
+      <p class="p-slide">{{slide.description}}</p>
       <img src={{slide.image}}/>
       <p>{{slide.help_text}}</p>
+      <ion-button (click)="goToHome()" class="{{ last ? 'last-slide-button' : 'regular-button' }}">
+        {{ slide.ionbutton }}
+      </ion-button>
       <!--
 <ion-avatar class="avatar-slide">
         <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />

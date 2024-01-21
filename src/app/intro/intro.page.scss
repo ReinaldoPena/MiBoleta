@@ -26,8 +26,8 @@
   text-decoration: none;
 }
 swiper-container{
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 80%;
 }
 
 swiper-slide{
@@ -40,8 +40,18 @@ swiper-slide{
     --border-radius: 0px;
   }
   .blue-title{
-    color: rgb(39, 181, 247);
+    font-size: 2.3em;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(8, 142, 204);
   }
+
+  .p-slide {
+      font-size: 1.5em; // Ajusta el tamaño del párrafo según sea necesario
+      text-align: center;
+
+  }
+
   .slide-1{
     background-color: rgb(200, 0, 15);
   }
@@ -51,3 +61,34 @@ swiper-slide{
   .slide-3{
     background-color: rgb(20, 120, 20);
   }
+  
+  ion-button.last-slide-button {
+    // Estilos específicos para el botón en el último slide
+    font-size: 1.5em;
+    --color: white;
+    --background: red !important; // Asegura que el fondo sea rojo
+    border: none;
+    margin-right: 8px;
+    position: absolute;
+    top: 40px;
+    right: 8px;
+  }
+  
+  ion-button.regular-button {
+    // Estilos para el botón en todos los slides que no son el último
+    // Puedes personalizar según tus necesidades
+    font-size: 1em;
+    --color: black;
+    --background: lightgray;
+    --border: 1px solid darkgray;
+    margin-right: 8px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+  
+  ion-button.last-slide-button ion-icon {
+    // Estilos específicos para el icono dentro del último botón
+    --color: white;
+  }
+  
