@@ -10,6 +10,7 @@ export class IntroPage implements OnInit {
   slides = [
     {
       title: "Bienvenidos a MiBoleta",
+
       description:"Hola, gracias por usar MiBoleta, el lugar mas seguro para adquirir tus boletas de cualquier evento!",
       image: "../../assets/images/TicketLogo.png",
       help_text: "Desliza para continuar",
@@ -38,11 +39,14 @@ export class IntroPage implements OnInit {
     private storage: Storage
   ) { }
 
+
   ionViewOldEnter() {
     console.log("Ya entre y vi la intro");
   // Vamos a guardar en el sotrage que ya vio la intro
   this.storage.set('YaVioIntro', true);
   }
+
+
   ngOnInit() {
   }
   goToHome(){
