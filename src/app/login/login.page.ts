@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
-
+import { Storage } from '@ionic/storage-angular';
 import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-login',
@@ -21,7 +21,8 @@ export class LoginPage implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private navController: NavController
+    private navController: NavController,
+    private storage: Storage
     ) {
     this.loginForm = this.formBuilder.group({
        email: new FormControl(
@@ -42,6 +43,8 @@ login(login_data: any){
   console.log(login_data);
   this.authService.loginUser(login_data).then(res =>{
     this.loginMessage= res;
+    this.storage.set('userLoggedIn', true);
+    
     this.navController.navigateForward('/home');
   }).catch(err => {
     this.loginMessage = err;

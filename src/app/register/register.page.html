@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center ion-text-uppercase">register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-avatar class="center-avatar">
+    <img src="assets/images/user.jpg" alt="logo" class="logo">
+   </ion-avatar>
+   <form [formGroup]="registerForm"(ngSubmit)="register(registerForm.value)">
+      <ion-item>
+    <ion-input label="Email" labelPlacement="floating" placeholder="Email" formControlName="email"></ion-input>
+  </ion-item>
+  <!--
+  <ion-item>
+    <ion-input label="Contraseña" labelPlacement="floating" placeholder="Contraseña" formControlName="password"></ion-input>
+  </ion-item>
+  -->
+  <ion-button
+  expand="full"
+  shape="round"
+  color="success"
+  
+  type="submit">
+  Register
+  </ion-button>
+   </form>
+</ion-content>
