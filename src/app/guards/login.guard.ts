@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class LoginGuard implements CanActivate {
   constructor(
     private storage: Storage,
-    private router: Router){}
+    private router: Router
+  ){ }
+  
    async canActivate(){
     const userLoggedIn = await this.storage.get('userLoggedIn');
   if (userLoggedIn){
@@ -17,7 +19,7 @@ export class LoginGuard implements CanActivate {
     console.log('login correcto voy al home');
     return true;
   }else{
-    console.log('el usuario no esta ogueado');
+    console.log('el usuario no esta logueado');
     this.router.navigateByUrl('/login');
     return false;
   }

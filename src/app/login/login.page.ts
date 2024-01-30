@@ -15,7 +15,13 @@ export class LoginPage implements OnInit {
       { type: "required", message: "El Email es obligatorio"},
       { type: "pattern", message: "El Email ingresado no es valido"}
     
+    ],
+    password:[
+      { type: "required", message: "La Contraseña es obligatoria"},
+      { type: "pattern", message: "La Contraseña ingresado no es valida"},
+      { type: "minLength", message: "La Contraseña debe tener minimo 8 caracteres"}
     ]
+    
   }
   loginMessage: any;
   constructor(
@@ -33,6 +39,16 @@ export class LoginPage implements OnInit {
           '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'
         )
         ])
+       ),
+       password: new FormControl(
+        "",
+        Validators.compose([
+        Validators.required,
+        Validators.minLength(5),
+        Validators.pattern(
+          '^[a-zA-Z0-9_.+-]+$'
+          )
+        ])
        )
     })
    }
@@ -49,5 +65,8 @@ login(login_data: any){
   }).catch(err => {
     this.loginMessage = err;
   })
+}
+goToRegister() {
+  this.navController.navigateBack('/register');
 }
 }

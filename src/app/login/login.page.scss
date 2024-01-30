@@ -2,8 +2,15 @@
     margin: auto;
 }
 .validation-message{
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
+    color: rgba(214, 39, 39, 0.589);
+    font-size: 15px;
+    margin-top: 10px;
     //mejorar estilo de presentacion
+}
+.register-link {
+    color: #007bff;  
+    cursor: pointer; 
+    text-decoration: underline; 
+    margin-top: 10px;
+    display: block;
 }

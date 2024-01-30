@@ -40,10 +40,11 @@ export class IntroPage implements OnInit {
   ) { }
 
 
-  ionViewOldEnter() {
+  ionViewDidEnter() {
     console.log("Ya entre y vi la intro");
   // Vamos a guardar en el sotrage que ya vio la intro
-  this.storage.set('YaVioIntro', true);
+  this.storage.set('mostreLaIntro', true);
+  
   }
 
 
