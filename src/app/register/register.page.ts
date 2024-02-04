@@ -70,7 +70,7 @@ registerMessage: any;
         "",
         Validators.compose([
         Validators.required,
-        Validators.minLength(8),
+        Validators.minLength(5),
         Validators.pattern(
           '^[a-zA-Z0-9_.+-]+$'
           )
@@ -109,5 +109,8 @@ register(register_data: any){
   }).catch(err => {
     this.registerMessage = err;
   })
+}
+goToLogin(){
+  this.navCtrl.navigateBack("/login");
 }
 }

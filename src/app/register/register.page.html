@@ -1,5 +1,9 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons>
+    <ion-button (click)="goToLogin()"></ion-button>
+    <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-buttons>
     <ion-title class="ion-text-center ion-text-uppercase">register</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,7 +19,7 @@
   <div class="validation-message">
     <ng-container *ngFor="let validation of validation_messages.email">
       <div *ngIf="(registerForm.get('email')?.hasError(validation.type) && registerForm.get('email')?.dirty)">
-        {{validation.message}}
+        <ion-icon name="close-outline"></ion-icon>{{validation.message}}
       </div>
     </ng-container>
   </div>
@@ -25,7 +29,7 @@
   <div class="validation-message">
     <ng-container *ngFor="let validation of validation_messages.password">
       <div *ngIf="(registerForm.get('password')?.hasError(validation.type) && registerForm.get('password')?.dirty)">
-        {{validation.message}}
+        <ion-icon name="close-outline"></ion-icon>{{validation.message}}
       </div>
     </ng-container>
   </div>
@@ -35,7 +39,7 @@
   <div class="validation-message">
     <ng-container *ngFor="let validation of validation_messages.validPassword">
       <div *ngIf="(registerForm.get('validPassword')?.hasError(validation.type) && registerForm.get('validPassword')?.dirty)">
-        {{validation.message}}
+        <ion-icon name="close-outline"></ion-icon>{{validation.message}}
       </div>
     </ng-container>
   </div>
@@ -45,7 +49,7 @@
   <div class="validation-message">
     <ng-container *ngFor="let validation of validation_messages.name">
       <div *ngIf="(registerForm.get('name')?.hasError(validation.type) && registerForm.get('name')?.dirty)">
-        {{validation.message}}
+        <ion-icon name="close-outline"></ion-icon>{{validation.message}}
       </div>
     </ng-container>
   </div>
@@ -55,7 +59,7 @@
   <div class="validation-message">
     <ng-container *ngFor="let validation of validation_messages.lastName">
       <div *ngIf="(registerForm.get('lastName')?.hasError(validation.type) && registerForm.get('lastName')?.dirty)">
-        {{validation.message}}
+        <ion-icon name="close-outline"></ion-icon>{{validation.message}}
       </div>
     </ng-container>
   </div>

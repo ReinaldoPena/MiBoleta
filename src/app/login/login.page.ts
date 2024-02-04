@@ -61,7 +61,7 @@ login(login_data: any){
     this.loginMessage= res;
     this.storage.set('userLoggedIn', true);
     
-    this.navController.navigateForward('/home');
+    this.navController.navigateForward('/menu/home');
   }).catch(err => {
     this.loginMessage = err;
   })

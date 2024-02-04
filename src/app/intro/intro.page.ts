@@ -52,7 +52,7 @@ export class IntroPage implements OnInit {
   }
   goToHome(){
     console.log("go to home");
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/menu/home');
     this.storage.set('mostreElHome', true);
   }
 
